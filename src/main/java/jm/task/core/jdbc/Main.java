@@ -3,9 +3,11 @@ package jm.task.core.jdbc;
 import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static <Map> void main(String[] args) throws SQLException {
 
 //        UserDaoJDBCImpl userDaoJDBC = UserDaoJDBCImpl.initDao();
 //        userDaoJDBC.dropUsersTable();
@@ -22,14 +24,15 @@ public class Main {
 //        userDaoJDBC.cleanUsersTable();
 //        System.out.println(userDaoJDBC.getAllUsers());
 
-        UserDaoHibernateImpl userDaoHibernate = UserDaoHibernateImpl.initHiberImpl();
-        userDaoHibernate.saveUser("Kolya", "Moskin", (byte) 52);
-        userDaoHibernate.saveUser("Grysha", "Huikin", (byte) 41);
+//        UserDaoHibernateImpl userDaoHibernate = UserDaoHibernateImpl.initHiberImpl();
+//        userDaoHibernate.saveUser("Kolya", "Moskin", (byte) 52);
+//        userDaoHibernate.saveUser("Grysha", "Huikin", (byte) 41);
+//
+//        System.out.println(userDaoHibernate.getAllUsers());
+//
+//        userDaoHibernate.cleanUsersTable();
+//        System.out.println(userDaoHibernate.getAllUsers());
 
-        System.out.println(userDaoHibernate.getAllUsers());
-
-        userDaoHibernate.cleanUsersTable();
-        System.out.println(userDaoHibernate.getAllUsers());
 
 
     }

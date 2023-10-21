@@ -1,25 +1,27 @@
+package jm.task.core.jdbc.service;
+
 import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.service.UserService;
-import jm.task.core.jdbc.service.UserServiceImpl;
+import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserServiceTest {
-    private final UserService userService = new UserServiceImpl();
+public class UserServiceImplHiberTest {
+
+    private final UserServiceImplHiber userService = new UserServiceImplHiber();
 
     private final String testName = "Ivan";
     private final String testLastName = "Ivanov";
     private final byte testAge = 5;
 
-    public UserServiceTest() throws SQLException {
+    public UserServiceImplHiberTest() throws SQLException {
     }
 
 
     @Test
-    public void dropUsersTable() {
+    public void dropUsersTable1() {
         try {
             userService.dropUsersTable();
             userService.dropUsersTable();
@@ -102,5 +104,4 @@ public class UserServiceTest {
             Assert.fail("При тестировании очистки таблицы пользователей произошло исключение\n" + e);
         }
     }
-
 }
